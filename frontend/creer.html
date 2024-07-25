@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="creer.css">
+</head>
+<body>
+    <h1>Ajouter nouveau produit</h1>
+    <a href="index.html"><button>Retour</button></a>
+    <form action="" class="productForm" id="productForm">
+        <input type="text" name="name" id="name" placeholder="Name" required>
+        <input type="number" name="quantity" id="quantity" value="1" min="0" max="10" placeholder="Quantity" required>
+        <textarea name="description" id="desc" placeholder="Description" required></textarea>
+        <input type="submit" value="Submit product" id="submitter">
+    </form>
+    <script src="creer.js" defer></script>
+</body>
+</html>

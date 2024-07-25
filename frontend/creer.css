@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+*,*::before,*::after{
+    transition: all 0.3s ease;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+}
+button,input[type=submit],input[type=button]{
+    cursor: pointer;
+}
+
+.productForm{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 40% !important;
+}
+
+form input{
+    min-height: 30px;
+    font-size: 20px;
+}
+
+form textarea{
+    font-size: 15px;
+}
+
+input[type=submit],button{
+    background: red;
+    color: white;
+    border: none;outline: none;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+input[type=submit]:hover,button:hover{
+    background-color: lightgray;
+    color: black;
+}

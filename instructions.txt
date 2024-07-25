@@ -1,0 +1,2 @@
+table product (id,name,quantity,desc)
+route get/post
