@@ -17,9 +17,30 @@ fetch("http://localhost:3500/api/product")
 
         let productDesc = document.createElement("p");
         productDesc.innerText = product.description;
-        productDiv.appendChild(productDesc);
 
-        products.appendChild(productDiv);
+        fetch("http://localhost:3500/api/avis")
+        .then(response=>response.json())
+        .then(data=>{
+            if(product.avis){
+                for(let pdt of product.avis){
+                    let filtered = data.filter((value,index)=>value._id === pdt);
+                    productDesc.innerHTML += "<br>Avis : \n"
+                    for(let av of filtered){
+                        productDesc.innerHTML += av.description + "\n<br>";
+                    }
+                }
+            }
+        })
+        .catch(error=>{
+            console.error('error',error);
+        })
+
+        productDiv.appendChild(productDesc);
+        let newLink = document.createElement("a");
+        newLink.href = "./product.html?id="+product._id.toString();
+        newLink.appendChild(productDiv);
+
+        products.appendChild(newLink);
     }
 })
 .catch(error=>{

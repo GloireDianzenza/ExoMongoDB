@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const cors = require("cors");
 const productRouter = require("./route/product");
+const avisRouter = require("./route/avis");
 
 mongoose.connect("mongodb+srv://gloiredianzenza5:007315Jbmk@cluster0.z9ewwr5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").then(()=>console.log("Connected")).catch((error)=>{
     console.log("error");
@@ -19,5 +20,6 @@ app.use((req,res,next)=>{
 app.use(cors());
 app.use(express.json());
 app.use("/api/product",productRouter);
+app.use("/api/avis",avisRouter);
 
 module.exports = app;

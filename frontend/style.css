@@ -52,6 +52,14 @@ h1{
     text-align: center;
 }
 
+.products a{
+    color: black !important;
+}
+
+.products a:hover{
+    transform: scale(1.2);
+}
+
 a button{
     background: red;
     color: white;

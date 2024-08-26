@@ -6,5 +6,15 @@
     "express": "^4.19.2",
     "mongoose": "^8.5.1",
     "path": "^0.12.7"
-  }
+  },
+  "name": "exoproduit",
+  "version": "1.0.0",
+  "main": "backend/server.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "author": "GloireDianzenza",
+  "license": "ISC",
+  "description": ""
 }
